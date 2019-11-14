@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from '../approuting/app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import{MatToolbarModule} from '@angular/material/toolbar';
@@ -14,9 +13,13 @@ import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishDetailsComponent } from './dish-details/dish-details.component';
 import{ DishService} from './service/dish.service';
+import{PromotionService} from './service/promotion.service';
 import { from } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,9 @@ import { FooterComponent } from './footer/footer.component';
     DishDetailsComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
   
   ],
   imports: [
@@ -37,7 +43,7 @@ import { FooterComponent } from './footer/footer.component';
     MatCardModule,
     MatButtonModule
   ],
-  providers: [DishService],
+  providers: [DishService,PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
