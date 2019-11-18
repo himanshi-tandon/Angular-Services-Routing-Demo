@@ -15,11 +15,18 @@ import { DishDetailsComponent } from './dish-details/dish-details.component';
 import{ DishService} from './service/dish.service';
 import{PromotionService} from './service/promotion.service';
 import { from } from 'rxjs';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +37,7 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    LoginComponent,
   
   ],
   imports: [
@@ -40,10 +48,18 @@ import { ContactComponent } from './contact/contact.component';
     FlexLayoutModule,
     MatListModule,
     MatGridListModule,
+    MatDialogModule,
     MatCardModule,
+    MatFormFieldModule, 
+    MatInputModule,
+    MatCheckboxModule,
+    FormsModule,
     MatButtonModule
   ],
   providers: [DishService,PromotionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    LoginComponent
+],
 })
 export class AppModule { }
